@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		75D0A69B299F5C7000CAE969 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0A69A299F5C7000CAE969 /* StoreKit.framework */; };
 		75D0A69D299F5D6400CAE969 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0A69C299F5D6400CAE969 /* IAPViewController.swift */; };
-		75D0A6A8299F6C7100CAE969 /* IAPService+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0A6A5299F6C7100CAE969 /* IAPService+Notification.swift */; };
-		75D0A6A9299F6C7100CAE969 /* MyProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0A6A6299F6C7100CAE969 /* MyProducts.swift */; };
-		75D0A6AA299F6C7100CAE969 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0A6A7299F6C7100CAE969 /* IAPService.swift */; };
+		75D9B8BF29AC6FF000661387 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9B8BE29AC6FF000661387 /* IAPService.swift */; };
+		75D9B8C129AC6FF200661387 /* IAPService+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9B8C029AC6FF200661387 /* IAPService+Notification.swift */; };
+		75D9B8C329AC702D00661387 /* MyProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9B8C229AC702D00661387 /* MyProducts.swift */; };
 		9B0CEAD22924F3C400C21867 /* MultipleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0CEAD12924F3C400C21867 /* MultipleModel.swift */; };
 		9B0CEAD42924F3D100C21867 /* MultipleStc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0CEAD32924F3D100C21867 /* MultipleStc.swift */; };
 		9B4130A5291D438600B9569C /* Used_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4130A4291D438600B9569C /* Used_api.swift */; };
@@ -53,9 +53,9 @@
 		65357AAE30368B4517B947D8 /* Pods-Warning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Warning.debug.xcconfig"; path = "Target Support Files/Pods-Warning/Pods-Warning.debug.xcconfig"; sourceTree = "<group>"; };
 		75D0A69A299F5C7000CAE969 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		75D0A69C299F5D6400CAE969 /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
-		75D0A6A5299F6C7100CAE969 /* IAPService+Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IAPService+Notification.swift"; path = "../../../ExIAP-main/ExInAppPurchase/Service/IAPService+Notification.swift"; sourceTree = "<group>"; };
-		75D0A6A6299F6C7100CAE969 /* MyProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyProducts.swift; path = "../../../ExIAP-main/ExInAppPurchase/Service/MyProducts.swift"; sourceTree = "<group>"; };
-		75D0A6A7299F6C7100CAE969 /* IAPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IAPService.swift; path = "../../../ExIAP-main/ExInAppPurchase/Service/IAPService.swift"; sourceTree = "<group>"; };
+		75D9B8BE29AC6FF000661387 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IAPService.swift; path = ../IAPService.swift; sourceTree = "<group>"; };
+		75D9B8C029AC6FF200661387 /* IAPService+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IAPService+Notification.swift"; path = "../IAPService+Notification.swift"; sourceTree = "<group>"; };
+		75D9B8C229AC702D00661387 /* MyProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyProducts.swift; path = ../MyProducts.swift; sourceTree = "<group>"; };
 		9B0CEAD12924F3C400C21867 /* MultipleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleModel.swift; sourceTree = "<group>"; };
 		9B0CEAD32924F3D100C21867 /* MultipleStc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleStc.swift; sourceTree = "<group>"; };
 		9B224F9228D865DE000A9321 /* Warning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Warning.entitlements; sourceTree = "<group>"; };
@@ -116,14 +116,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		75D0A69E299F5DF600CAE969 /* IAP */ = {
+		75D9B8C629AC705C00661387 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				75D0A6A7299F6C7100CAE969 /* IAPService.swift */,
-				75D0A6A5299F6C7100CAE969 /* IAPService+Notification.swift */,
-				75D0A6A6299F6C7100CAE969 /* MyProducts.swift */,
+				75D9B8C029AC6FF200661387 /* IAPService+Notification.swift */,
+				75D9B8BE29AC6FF000661387 /* IAPService.swift */,
+				75D9B8C229AC702D00661387 /* MyProducts.swift */,
 			);
-			path = IAP;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9B0CEAD02924F3AF00C21867 /* Multiple */ = {
@@ -187,7 +187,6 @@
 		9B784B9628D861B20087040D /* Warning */ = {
 			isa = PBXGroup;
 			children = (
-				75D0A69E299F5DF600CAE969 /* IAP */,
 				9B7D513428E9A10C002479CC /* Model */,
 				9B7D513328E9A06E002479CC /* ReserveDetail */,
 				9B8B43D028E15A59001BDD6C /* Setting */,
@@ -200,6 +199,7 @@
 				9B784B9D28D861B20087040D /* Main.storyboard */,
 				75D0A69C299F5D6400CAE969 /* IAPViewController.swift */,
 				9B6A2D8328DDE62B005AC257 /* MainViewController.swift */,
+				75D9B8C629AC705C00661387 /* New Group */,
 				9B784BA028D861B70087040D /* Assets.xcassets */,
 				9B784BA228D861B70087040D /* LaunchScreen.storyboard */,
 				9B784BA528D861B70087040D /* Info.plist */,
@@ -329,7 +329,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9B784B8F28D861B20087040D /* Build configuration list for PBXProject "Warning" */;
+			buildConfigurationList = 9B784B8F28D861B20087040D /* Build configuration list for PBXProject "asad" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -412,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B0CEAD22924F3C400C21867 /* MultipleModel.swift in Sources */,
+				75D9B8C129AC6FF200661387 /* IAPService+Notification.swift in Sources */,
 				9B8B43C928DFE733001BDD6C /* Reserve_stc.swift in Sources */,
 				75D0A69D299F5D6400CAE969 /* IAPViewController.swift in Sources */,
 				9B784B9C28D861B20087040D /* ViewController.swift in Sources */,
@@ -423,20 +424,19 @@
 				9B4B4ACB2924DA9D001105EF /* Multi_stc.swift in Sources */,
 				9B784B9A28D861B20087040D /* SceneDelegate.swift in Sources */,
 				9B4130A5291D438600B9569C /* Used_api.swift in Sources */,
-				75D0A6A9299F6C7100CAE969 /* MyProducts.swift in Sources */,
 				9BB4199528E9954000A81B99 /* Check_stc.swift in Sources */,
 				9BB4199728E9969400A81B99 /* Check_api.swift in Sources */,
 				9B7D513628E9A127002479CC /* MyReserveStc.swift in Sources */,
 				9B8B43CD28DFE838001BDD6C /* ReserveInfo.swift in Sources */,
 				9B51310828DEDD290071FE51 /* RoomInfo.swift in Sources */,
-				75D0A6AA299F6C7100CAE969 /* IAPService.swift in Sources */,
 				9B7D513828E9A16C002479CC /* MyReserveModel.swift in Sources */,
 				9B8B43C728DFE71C001BDD6C /* Reserve_api.swift in Sources */,
 				9B0CEAD42924F3D100C21867 /* MultipleStc.swift in Sources */,
 				9B7D513C28E9A426002479CC /* MyReserveCells.swift in Sources */,
-				75D0A6A8299F6C7100CAE969 /* IAPService+Notification.swift in Sources */,
 				9B51310A28DEDFAC0071FE51 /* Color.swift in Sources */,
+				75D9B8C329AC702D00661387 /* MyProducts.swift in Sources */,
 				9B51310C28DEF0910071FE51 /* SettingViewController.swift in Sources */,
+				75D9B8BF29AC6FF000661387 /* IAPService.swift in Sources */,
 				9B6A2D8428DDE62B005AC257 /* MainViewController.swift in Sources */,
 				9B4130A7291D439400B9569C /* Used_stc.swift in Sources */,
 			);
@@ -651,7 +651,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B784B8F28D861B20087040D /* Build configuration list for PBXProject "Warning" */ = {
+		9B784B8F28D861B20087040D /* Build configuration list for PBXProject "asad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B784BA628D861B70087040D /* Debug */,
