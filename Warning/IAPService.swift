@@ -24,6 +24,7 @@ protocol IAPServiceType {
 
 // StoreKit을 사용하려면 NSObject를 상속받고 IAPServiceType을 준수
 final class IAPService: NSObject, IAPServiceType {
+    
     // 앱스토어에서 입력한 productID들 "com.jake.sample.ExInAppPurchase.shopping"
     private let productIDs: Set<String>
     // 구매한 productID
@@ -68,6 +69,7 @@ final class IAPService: NSObject, IAPServiceType {
     }
     
     func restorePurchases() {
+        print(self.purchasedProductIDs)
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
 }
@@ -79,7 +81,7 @@ extension IAPService: SKProductsRequestDelegate {
         self.productsCompletion?(true, products)
         self.clearRequestAndHandler()
 
-        products.forEach { print("Found product: \($0.productIdentifier) \($0.localizedTitle) \($0.price.floatValue)") }
+        products.forEach { print("Product ID: \($0.productIdentifier) \($0.localizedTitle) Price: \($0.price.floatValue)") }
     }
 
     // failed
@@ -96,6 +98,8 @@ extension IAPService: SKProductsRequestDelegate {
 }
 
 extension IAPService: SKPaymentTransactionObserver {
+    
+    
     // 거래가 성공, 실패, restore된 경우 finishTransaction을 실행
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         transactions.forEach {
@@ -125,7 +129,8 @@ extension IAPService: SKPaymentTransactionObserver {
             }
         }
     }
-
+    
+    
     // PaymentQueue의 델리게이트 메소드에서 불리는 deliverPurchaseNotificationFor(id:) 메소드에 노티를 보내는 코드 추가 (post)
     private func deliverPurchaseNotificationFor(id: String?) {
         guard let id = id else { return }
@@ -136,5 +141,6 @@ extension IAPService: SKPaymentTransactionObserver {
             name: .iapServicePurchaseNotification,
             object: id
         )
+        
     }
 }

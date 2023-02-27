@@ -20,6 +20,7 @@ class IAPViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // products 항목 가져오기
         MyProducts.iapService.getProducts { [weak self] success, products in
             print("load products \(products ?? [])")
             guard let vc = self else { return }
@@ -40,20 +41,29 @@ class IAPViewController: UIViewController {
         )
     }
 
+    func successAction() {
+        let successMesage = UIAlertController(title: "결제 성공", message: "구매가 완료되었습니다.", preferredStyle: .alert)
+
+        let confirmAction = UIAlertAction(title: "확인", style: .cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("확인")
+        })
+        successMesage.addAction(confirmAction)
+        self.present(successMesage, animated: true, completion: nil)
+    }
+
     @objc private func handlePurchaseNoti(_ notification: Notification) {
         guard
             let productID = notification.object as? String,
             let index = self.products.firstIndex(where: { $0.productIdentifier == productID })
             else { return }
-
-//        self.tableView.reloadRows(at: [IndexPath(index: index)], with: .fade)
-//        self.tableView.performBatchUpdates(nil, completion: nil)
     }
 
     // MARK: IBActions
     @IBAction func didRestore(_ sender: Any) {
         print(#function)
         MyProducts.iapService.restorePurchases()
+        // restore된 경우(과거 구매 완료된 것 다시 조회) 구매했던 목록으로 추가 (UserDefaults) - 서버에 전달
     }
 
     @IBAction func didBuy(_ sender: Any) {
